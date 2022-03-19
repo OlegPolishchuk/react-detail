@@ -59,3 +59,18 @@
   border: 1px solid #000;
   border-radius: 50%;
 }
+
+
+.accordion_wrapper {
+  align-self: center;
+  list-style: none;
+  width: 100px;
+  margin: 0;
+  margin-left: calc(50% - 50px);
+  padding: 0;
+}
+
+.accordion_wrapper li {
+  border: 1px solid #e5e5e5;
+  padding: 10px;
+}
