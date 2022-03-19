@@ -4,6 +4,7 @@ import Rating from "./components/Rating";
 import Accordion from "./components/Accordion";
 import OnOf from "./components/OnOf/OnOf";
 import UncontrolledAccordion from "./components/UncontrolledControledAccordion";
+import {UncontrolledRating} from "./components/UncontrolledRating";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <OnOf/>
         <OnOf/>
         <OnOf/>
+        <UncontrolledRating/>
 
         <UncontrolledAccordion title={'menu'} />
         <UncontrolledAccordion title={'Users'} />
