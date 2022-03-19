@@ -36,3 +36,26 @@
     transform: rotate(360deg);
   }
 }
+
+/*кнопки и лампочка*/
+
+.onOf {
+  display: flex;
+  padding: 30px;
+}
+
+.green {
+  background: green;
+}
+
+.red {
+  background: red;
+}
+
+.light {
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
+  border: 1px solid #000;
+  border-radius: 50%;
+}
