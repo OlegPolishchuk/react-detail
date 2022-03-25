@@ -18,8 +18,8 @@ function App() {
         {/*<Rating value={4}/>*/}
         {/*<Rating value={5}/>*/}
         <OnOf/>
-        <OnOf/>
-        <OnOf/>
+        {/*<OnOf/>*/}
+        {/*<OnOf/>*/}
         <UncontrolledRating/>
 
         <UncontrolledAccordion title={'menu'} />
