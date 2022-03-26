@@ -4,7 +4,7 @@ type OnOfPropsType = {
     // isOn: boolean
 }
 
-const OnOf = (props: OnOfPropsType) => {
+const UncontrolledOnOf = (props: OnOfPropsType) => {
     // return (
     //     // <div className={'onOf'}>
     //     //     <button className={props.isOn ? 'green' : ''}>On</button>
@@ -47,4 +47,4 @@ const OnOf = (props: OnOfPropsType) => {
     );
 };
 
-export default OnOf;
+export default UncontrolledOnOf;
