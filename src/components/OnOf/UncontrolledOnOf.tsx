@@ -2,17 +2,11 @@ import React, {useState} from 'react';
 
 type OnOfPropsType = {
     // isOn: boolean
+    onChange: (on: boolean) => void
 }
 
 const UncontrolledOnOf = (props: OnOfPropsType) => {
-    // return (
-    //     // <div className={'onOf'}>
-    //     //     <button className={props.isOn ? 'green' : ''}>On</button>
-    //     //     <button className={props.isOn ? '' : 'red'}>Off</button>
-    //     //     <div className={ props.isOn ? 'green light' : 'red light' }>
-    //     //     </div>
-    //     // </div>
-    // );
+
 
     let [on , setOn] = useState(false);
 
@@ -38,10 +32,20 @@ const UncontrolledOnOf = (props: OnOfPropsType) => {
         background: on ? 'green' : 'red',
     }
 
+    const onClicked = () => {
+        setOn(true)
+        props.onChange(true)
+    }
+
+    const offClicked = () => {
+        setOn(false)
+        props.onChange(false)
+    }
+
     return (
         <div className={'onOf'}>
-            <div onClick={()=> { setOn(true) }} style={onStyle}>On</div>
-            <div onClick={()=> { setOn(false)}} style={offStyle}>Off</div>
+            <div onClick={()=> { onClicked() }} style={onStyle}>On</div>
+            <div onClick={()=> { offClicked() }} style={offStyle}>Off</div>
             <div style={indicatorStyle}></div>
         </div>
     );

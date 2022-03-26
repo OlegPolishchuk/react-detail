@@ -23,7 +23,7 @@ function App() {
 
         <Rating value={ratingValue} onClick={setRatingValue}/>
 
-        <UncontrolledOnOf/>
+        <UncontrolledOnOf onChange={setOn}/> {on.toString()}
         <OnOf isOn={on} toggleOn={setOn}/>
 
         <UncontrolledRating/>
