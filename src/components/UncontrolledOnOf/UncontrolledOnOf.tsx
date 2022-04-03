@@ -1,14 +1,14 @@
 import React, {useState} from 'react';
 
-type OnOfPropsType = {
-    // isOn: boolean
+export type OnOfPropsType = {
     onChange: (on: boolean) => void
+    defaultOn?: boolean
 }
 
-const UncontrolledOnOf = (props: OnOfPropsType) => {
+export const UncontrolledOnOf = (props: OnOfPropsType) => {
 
 
-    let [on , setOn] = useState(false);
+    let [on , setOn] = useState(props.defaultOn ? props.defaultOn : false);
 
     const onStyle = {
         width: '50px',

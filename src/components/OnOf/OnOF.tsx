@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
 
-type OnOfPropsType = {
+export type OnOfPropsType = {
     isOn: boolean
     toggleOn: (isOn: boolean) => void
 }
 
-const OnOf = (props: OnOfPropsType) => {
+export const OnOf = (props: OnOfPropsType) => {
 
 
     const onStyle = {
@@ -39,4 +39,3 @@ const OnOf = (props: OnOfPropsType) => {
     );
 };
 
-export default OnOf;

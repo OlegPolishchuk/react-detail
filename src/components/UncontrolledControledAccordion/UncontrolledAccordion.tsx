@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 
-type AccordionPropsType = {
+export type AccordionPropsType = {
     title: string
 }
 
-const UncontrolledAccordion = (props: AccordionPropsType) => {
+export const UncontrolledAccordion = (props: AccordionPropsType) => {
 
     const [collapsed, setCollapsed] = useState(false)
 
@@ -38,4 +38,3 @@ function AccordionBody (){
     )
 }
 
-export default UncontrolledAccordion;
