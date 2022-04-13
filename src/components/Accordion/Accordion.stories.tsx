@@ -23,6 +23,12 @@ export const UnCollapsedAccordion = Template.bind({})
 UnCollapsedAccordion.args = {
     title: 'Users',
     collapsed: false,
+    items: [
+        {title: 'Dimych', value: '1'},
+        {title: 'Oleg', value: '2'},
+        {title: 'Victor', value: '3'},
+        {title: 'Igor', value: '4'}
+    ],
     onChange: callback
 }
 
@@ -32,7 +38,13 @@ export const ModeChanging: Story<AccordionPropsType>  = (args) => {
 }
 
 ModeChanging.args = {
-    title: 'Menu'
+    title: 'Menu',
+    items: [
+        {title: 'Dimych', value: ''},
+        {title: 'Oleg', value: ''},
+        {title: 'Victor', value: ''},
+        {title: 'Igor', value: ''}
+    ],
 }
 
 

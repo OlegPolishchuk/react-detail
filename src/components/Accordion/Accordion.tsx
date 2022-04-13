@@ -1,5 +1,10 @@
 import React from 'react';
 
+type ItemType = {
+    title: string
+    value: any
+}
+
 export type AccordionPropsType = {
     title: string
     /**
@@ -11,13 +16,14 @@ export type AccordionPropsType = {
      * @param accordionCollapsed is a flag of accordion state(collapsed/ uncollapsed)
      */
     onChange: (accordionCollapsed: boolean) => void
+    items: ItemType[]
 }
 
 export const Accordion = (props: AccordionPropsType) => {
     return (
         <div>
             <AccordionTitle title={props.title} onChange={() => props.onChange(!props.collapsed)}/>
-            {!props.collapsed && <AccordionBody/>}
+            {!props.collapsed && <AccordionBody items={props.items}/>}
         </div>
     );
 };
@@ -35,12 +41,15 @@ function  AccordionTitle(props: AccordionTitleType){
     )
 }
 
-function AccordionBody (){
+type AccordionBodyPropsType = {
+    items: ItemType[]
+}
+
+function AccordionBody (props: AccordionBodyPropsType){
     return (
         <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
+            {props.items.map((el,i) => <li key={i}>{el.title}</li>)}
+
         </ul>
     )
 }

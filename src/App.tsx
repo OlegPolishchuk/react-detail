@@ -13,12 +13,20 @@ function App() {
     const [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false)
     const [on, setOn] = useState<boolean>(false)
 
+    const items = [
+        {title: 'Dimych', value: ''},
+        {title: 'Oleg', value: ''},
+        {title: 'Victor', value: ''},
+        {title: 'Igor', value: ''}
+    ]
+
   return (
     <div className="App">
         <Accordion
             title={'menu'}
             collapsed={accordionCollapsed}
             onChange={setAccordionCollapsed}
+            items={items}
         />
 
         <Rating value={ratingValue} onClick={setRatingValue}/>
